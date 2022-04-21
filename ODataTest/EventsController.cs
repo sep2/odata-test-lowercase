@@ -13,13 +13,13 @@ public class EventsController : ODataController
     };
 
     [EnableQuery]
-    public SingleResult<Event> Get(Guid key)
+    public SingleResult<Event> Get(int key)
     {
         return SingleResult.Create(new[] { _event }.AsQueryable());
     }
 
     [EnableQuery]
-    public IQueryable<Activity> Getactivities(Guid key)
+    public IQueryable<Activity> GetActivities(int key)
     {
         return _event.Activities.AsQueryable();
     }

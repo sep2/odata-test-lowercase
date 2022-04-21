@@ -19,7 +19,7 @@ public class EventsController : ODataController
     }
 
     [EnableQuery]
-    public IQueryable<Activity> GetActivities(int key)
+    public IQueryable<Activity> Getactivities(int key)
     {
         return _event.Activities.AsQueryable();
     }
